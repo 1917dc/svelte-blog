@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@import "@fontsource-variable/fira-code";
+@import "@fontsource/fira-mono";
+@plugin '@tailwindcss/typography';
+@import 'katex/dist/katex.min.css';
+
+
+@theme {
+    --default-font-family: "Fira Code Variable", monospace;
+    --default-mono-font-family: "Fira Mono", monospace;
+}
+
+::selection {
+    @apply bg-white text-black;
+}
+
+
+body {
+  @apply bg-black text-white; /* Tailwind version */
+  /* Or vanilla CSS: */
+  background: #000;
+  color: #fff;
+}
+
+/* Custom Prose-like Heading Styles */
+h1 {
+  @apply text-4xl font-bold my-6 text-inherit;
+}
+
+h2 {
+  @apply text-3xl font-bold my-6;
+}
+
+h3 {
+  @apply text-2xl font-bold my-6;
+}
+
+h4 {
+  @apply text-xl font-bold my-6;
+}
+
+pre {
+  @apply rounded-md p-3 my-3 max-w-full text-xs;
+  code {
+    @apply bg-transparent
+  }
+}
+
+img {
+  @apply max-w-2/3;
+}
+
+
+/* For unordered lists (bullets) */
+ul {
+  @apply list-disc; /* Adds bullet points and padding */
+}
+
+/* For ordered lists (numbers) */
+ol {
+  @apply list-decimal; /* Adds numbers and padding */
+}
+
+/* Optional: Style <li> globally */
+
+code {
+  @apply bg-neutral-700 rounded-xs p-0.5;
+}
